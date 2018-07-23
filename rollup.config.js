@@ -11,6 +11,7 @@ import flatMap from 'lodash.flatmap';
 
 const blackList = [
   'workflow-layout',
+  'workflow-chrome-plugin',
   'workflow-layouts',
   'workflow-template',
   'workflow-web',
@@ -32,6 +33,8 @@ const nodeInternalDependencies = {
 const sourceRoots = {
   'workflow-cmd': ['cli.js', 'index.js'],
   workflow: ['cli.js'],
+  'workflow-layout-yoga': ['index.js', 'components.js'],
+  'workflow-cmd': ['cli.js', 'index.js', 'npm.js', 'platform.js'],
 };
 
 function createConfig(bundle) {
