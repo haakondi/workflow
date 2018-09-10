@@ -6,6 +6,7 @@ const WorkflowResolverAbsolute = require('workflow-resolver-absolute');
 const WorkflowLoaderBabel = require('workflow-loader-babel');
 const WorkflowParserArguments = require('workflow-parser-arguments');
 const WorkflowTransformerApplyArgumentsToFields = require('workflow-transformer-apply-arguments-to-fields');
+const WorkflowTransformerAsync = require('workflow-transformer-async');
 const WorkflowLayout = require('workflow-layout');
 const WorkflowWm = require('workflow-wm-auto');
 
@@ -35,7 +36,7 @@ const config = {
   ],
   loaders: [{ loader: new WorkflowLoaderBabel(babelConfig) }],
   argumentParser: new WorkflowParserArguments(),
-  transformers: [new WorkflowTransformerApplyArgumentsToFields()],
+  transformers: [new WorkflowTransformerAsync(), new WorkflowTransformerApplyArgumentsToFields()],
   layout: new WorkflowLayout(),
   wm: new WorkflowWm(),
 };
