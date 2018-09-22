@@ -1,7 +1,7 @@
 /* eslint-env node */
 /* eslint-disable no-console */
 import execa from 'execa';
-import ncu from 'npm-check-updates';
+//import ncu from 'npm-check-updates';
 import { join } from 'path';
 import fs from 'fs';
 import prompt from 'prompt';
@@ -81,7 +81,7 @@ async function updateWorkflowCommand() {
 }
 
 async function updateWorkflowHome(args) {
-  const updates = await ncu.run({
+  /*const updates = await ncu.run({
     packageFile: join(baseFolder, 'package.json'),
     silent: false,
     jsonUpgraded: true,
@@ -140,7 +140,7 @@ async function updateWorkflowHome(args) {
     }
   } else {
     console.log('workflow-home is up to date');
-  }
+  }*/
 }
 
 function hasUpdates(updates) {
